@@ -357,6 +357,7 @@ iptables -t nat -A POSTROUTING -s 192.176.0.0/21 -o eth0 -j SNAT --to-source 192
 ```
 
 **Testing**
+
 Lakukan ping ke luar jaringan local pada setiap client
 ![testing](img/1.1.png)
 ![testing](img/1.2.png)
@@ -376,6 +377,7 @@ iptables -A FORWARD -d 192.176.7.128/29 -p tcp --dport 80 -j DROP
 ```
 
 **Testing**
+
 Lakukan nmap dari client dengan ip menuju DNS server dan DHCP server,
 
 ```
@@ -399,6 +401,7 @@ iptables -A INPUT -p icmp -m connlimit --connlimit-above 3 --connlimit-mask 0 -j
 ```
 
 **Testing**
+
 Lakukan ping dari client ke DNS server / DHCP server secara bersamaan
 ![testing](img/3.1.gif)
 
@@ -424,9 +427,13 @@ iptables -A INPUT -s 192.176.0.0/22 -j REJECT
 **Testing**
 
 pada `blueno`
+
 ![testing](img/4.1.png)
+
 pada `chiper`
+
 ![testing](img/4.2.png)
+
 Karena pada saat ping ke IP `doriki` bukan jam kerja maka akses `ditolak`
 
 ## No 5
@@ -453,9 +460,13 @@ iptables -A INPUT -s 192.176.6.0/23 -j REJECT
 **Testing**
 
 pada `elena`
+
 ![testing](img/5.1.png)
+
 pada `fukurou`
+
 ![testing](img/5.2.png)
+
 Karena pada saat ping ke IP `doriki` merupakan jam kerja maka akses `diterima`
 
 ## No 6
@@ -501,6 +512,7 @@ service apache2 restart
 **Testing**
 
 Lakukan curl dari client menuj IP `doriki` maka akan dirahan secara bergantian ke web server
+
 ![testing](img/6.1.png)
 
 &nbsp;
