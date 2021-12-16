@@ -519,4 +519,4 @@ Lakukan curl dari client menuj IP `doriki` maka akan dirahan secara bergantian k
 
 ## Kendala
 
-1. Waktu yang meper karena yang bersamaan dengan banyak FP
+1. Waktu yang mepet karena yang bersamaan dengan banyak FP
